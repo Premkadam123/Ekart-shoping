@@ -74,7 +74,7 @@ pipeline {
             steps{
                 script{
                    withCredentials([string(credentialsId: 'dockerhub-pwd', variable: 'dockerhubpwd')]) {
-                   sh 'docker login -u techdatainfinity -p ${dockerhubpwd}'}
+                   sh 'docker login -u prem788 -p ${dockerhubpwd}'}
                    sh 'docker push prem788/ekart-shoping:latest'
                 }
             }
